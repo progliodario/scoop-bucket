@@ -18,8 +18,8 @@ jobs:
       - name: Install YT Grabber from this bucket, start it, remove it
         shell: pwsh
         run: |
-          scoop bucket add test-bucket $PWD
-          scoop install test-bucket/yt-grabber
+          scoop bucket add progliodario https://github.com/progliodario/scoop-bucket
+          scoop install progliodario/yt-grabber
           $app = "$env:USERPROFILE\scoop\apps\yt-grabber\current\YT-Grabber.exe"
           if (-not (Test-Path $app)) { throw 'YT-Grabber.exe was not installed' }
           Start-Process $app -ArgumentList '--background','--port','8795'
