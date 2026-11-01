@@ -1,0 +1,23 @@
+{
+    "version": "1.1.0",
+    "description": "Download YouTube and YouTube Music videos and playlists from a local web page (10 at a time, numbered files, subscriptions).",
+    "homepage": "https://github.com/progliodario/YT-Grabber",
+    "license": "MIT",
+    "url": "https://github.com/progliodario/YT-Grabber/releases/download/v1.1.0/YT-Grabber-Setup-1.1.0.exe",
+    "hash": "a99690f782a15807936eec6bb770432f65441b09bb71c129600ed304d38d8866",
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "YT-Grabber.exe",
+            "YT Grabber"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/progliodario/YT-Grabber/releases/download/v$version/YT-Grabber-Setup-$version.exe",
+        "hash": {
+            "url": "https://github.com/progliodario/YT-Grabber/releases/download/v$version/SHA256SUMS",
+            "regex": "$sha256\\s+$basename"
+        }
+    }
+}
